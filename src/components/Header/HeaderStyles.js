@@ -12,7 +12,7 @@ background: #0F1624;
   grid-column-gap: 2rem;
   padding: 1rem;
   padding-top: 2rem;
-  animation: moveRight 1.5s ease-in;
+  animation: fade 1.5s ease-in;
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -21,15 +21,13 @@ background: #0F1624;
     grid-row-gap: 0.5rem;
   }
 
-  @keyframes moveRight {
+  @keyframes fade {
     0% {
       opacity: 0;
-      transform: translateX(50px);
     }
 
     100% {
       opacity: 1;
-      transform: translate(0);
     }
   }
 `;

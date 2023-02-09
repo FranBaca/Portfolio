@@ -183,7 +183,22 @@ export const ButtonBack = styled.div`
   position: relative;
   overflow: hidden;
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
-
+  animation renderButton 2s ease-in-out;
+  @keyframes renderButton {
+    from {
+    transform: translate3d(70px, 0, 0);
+     opacity: 0;
+     width: 0%;
+     fontSize: 5px;
+   }
+   to {
+      transform: translate3d(0, 0, 0);
+     opacity: 1;
+     color:#fff;
+     font-size: ${({ alt }) => alt ? '20px' : '24px'};
+     width: %100;
+   }
+  }
   @media ${(props) => props.theme.breakpoints.md} {
     width: ${({ alt }) => alt ? '150px' : '184px'};
     height: ${({ alt }) => alt ? '52px' : '48px'};
@@ -218,7 +233,6 @@ export const ButtonFront = styled.button`
   justify-content: center;
   cursor: pointer;
   box-shadow: ${({ disabled }) => disabled ? 'inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3)' : 'none'};
-
   &:hover {
     opacity: 0;
   }
@@ -243,6 +257,16 @@ export const ButtonFront = styled.button`
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 14px;
   }
+  animation: textgrowth 2s ease-in;
+  @keyframes textgrowth {
+    0% {
+    font-size: 0px;
+    }
+    100% {
+      font-size: ${({ alt }) => alt ? '20px' : '24px'};
+    }
+}
+
 `
 
 export const LinkContainer = styled.div`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LeftSection = styled.div`
   width: 100%;
-  animation: moveDown 1s ease-out;
+  animation: moveDown 1.5s ease-out;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 80%;
     display: flex;

@@ -3,13 +3,14 @@ import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag,
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 import { experience } from '../../constants/data';
+
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section nopadding id="#projects">
   <SectionDivider />
   <SectionTitle main>Experience & Projects</SectionTitle>
       <GridContainer>
         {experience.map((exp) =>(
-           <BlogCard key={exp.id}>
+           <BlogCard key={exp.id}  data-aos="fade-left" data-aos-duration="3000">
            <Img src={exp.img}/>
            <TitleContent>
              <HeaderThree title>{exp.title}</HeaderThree>
@@ -27,7 +28,7 @@ const Projects = () => (
          </BlogCard>
         ))}
         {projects.map((project)=>(
-          <BlogCard key={project.id}>
+          <BlogCard key={project.id} data-aos="fade-right" data-aos-duration="3000">
             <Img src={project.image}/>
             <TitleContent>
               <HeaderThree title>{project.title}</HeaderThree>

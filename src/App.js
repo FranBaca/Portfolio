@@ -7,7 +7,11 @@ import Technologies from './components/Technologies/Technologies';
 import Timeline from './components/TimeLine/TimeLine';
 import { Layout } from './layout/Layout';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 function App() {
+  AOS.init();
   return (
     <Theme>
       <Layout>  
