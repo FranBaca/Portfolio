@@ -22,10 +22,10 @@ const Footer = () => {
           <Slogan>I want to make beatiful things, even if nobody cares, as oposse to ugly things, thats my intent</Slogan>
         </CompanyContainer>
         <SocialContainer>
-        <SocialIcons href="https://github.com">
+        <SocialIcons href="https://github.com" target="_blank">
         <AiFillGithub size="3rem"/>
       </SocialIcons>
-      <SocialIcons href="https://linkedin.com">
+      <SocialIcons href="https://linkedin.com" target="_blank">
         <AiFillLinkedin size="3rem"/>
       </SocialIcons>
       </SocialContainer>
