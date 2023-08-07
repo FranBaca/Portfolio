@@ -1,5 +1,22 @@
 export const projects = [
   {
+    title: 'Airbnb Clone ',
+    description: "Using Next.js, Prisma and Tailwind I build a full airbnb clone with reservations, bookings and Google Authentication ",
+      image: '/images/6.png',
+      tags: ['Next.js', 'Prisma', 'Tailwind'],
+    visit: 'https://github.com/FranBaca/Airbnb-clone-',
+    id: 7,
+  },
+  {
+    title: 'Latam Wallet ',
+    description: "As a team of developers and designers we build a MVP for a Wallet of cryptocurrency, with transfers between users, withdrawals etc. Using React, Node, Express, MongoDB",
+      image: '/images/5.png',
+      tags: ['Cloud', 'Express', 'React', 'Node'],
+    source: 'https://latam-wallet-deploy.vercel.app/',
+    visit: 'https://github.com/FranBaca/LatamWalletDeploy',
+    id: 6,
+  }, 
+  {
     title: 'Henry Hotel',
     description: "Using React, Node.js, Express & Cloud database, my team and I build a full app for a hotel with check-ins, reservation system, event planning, and admin panel",
       image: '/images/1.png',
@@ -9,12 +26,21 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Countries App',
-    description:"Using React, Node.js, PostgresSQL, Express, i build a full stack app for tracking countries, display information about every country, and plan your vacations",
+    title: 'Henry Hotel',
+    description: "Using React, Node.js, Express & Cloud database, my team and I build a full app for a hotel with check-ins, reservation system, event planning, and admin panel",
+      image: '/images/1.png',
+      tags: ['Cloud', 'Express', 'React', 'Node'],
+    source: 'https://henryhotel.hruiz.com/',
+    visit: 'https://github.com/FranBaca/ecommerce-FT10-G2',
+    id: 0,
+  },
+  {
+    title: 'Liteflix',
+    description: "A lightweight netflix clone created with React, Chakra UI, React Dropzone",
     image: '/images/2.png',
-    tags: ['React', 'JavaScript', 'Express', 'Node', 'PostgresSQL'],
-    source: 'https://country-app-eosin.vercel.app/',
-    visit: 'https://github.com/FranBaca/Country-App',
+    tags: ['React', 'Node', 'Chakra UI'],
+    source: 'https://liteflix-two.vercel.app/',
+    visit: 'https://github.com/FranBaca/Liteflix',
     id: 1,
   },
   {
@@ -56,7 +82,7 @@ export const projects = [
 
 export const TimeLineData = [
   { year: 2018, text: 'Entered university & started learning code', },
-  { year: 2019, text: 'Drop out of university & started the Henry Full stack dev bootcamp', },
+  { year: 2019, text: 'Started the Henry Bootcamp', },
   { year: 2020, text: 'Got my first job as a developer', },
   { year: 2021, text: 'Got my second job as a developer', },
 ];

@@ -35,21 +35,6 @@ export const LeftSection = styled.div`
 `;
 
 export const ButtonSection = styled.div`
-animation: buttonOpen 2s ease-in-out;
-@keyframes buttonOpen {
-  from {
-    transform: translate3d(70px, 0, 0);
-   opacity: 0;
-   width: 0%;
-   fontSize: 0px;
- }
- to {
-    transform: translate3d(0, 0, 0);
-   opacity: 1;
-   width:248px;
-   color:#fff;
-   fontSize: 20px;
-   
- }
-
+display:flex;
+flex-direction:row;
 `

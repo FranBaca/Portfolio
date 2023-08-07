@@ -4,10 +4,13 @@ import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, 
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { TimeLineData } from '../../constants/constants';
 import { Img } from '../Projects/ProjectsStyles';
+import { useTranslation } from 'react-i18next';
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
-const Timeline = () => {
+export default function Timeline () {
+  const { t } = useTranslation();
+
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef = useRef();
 
@@ -46,10 +49,10 @@ const Timeline = () => {
 
   return (
     <Section id="about">
-    <SectionTitle>About Me</SectionTitle>
+    <SectionTitle>{t("about")}</SectionTitle>
     <Img src="images/Perfil.jpeg" style={{display:"flex", width:"200px", marginBottom:"30px", borderRadius:"200px"}}></Img>
     <SectionText>
-    My purpouse in the tech industry is to create and innovate. I enjoy creating stuff and i consider myself a very creative person.
+      {t("slogan")}
     </SectionText>
     <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
       <>
@@ -119,5 +122,3 @@ const Timeline = () => {
   </Section>
   );
 };
-
-export default Timeline;

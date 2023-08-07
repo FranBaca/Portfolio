@@ -1,15 +1,18 @@
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import { useTranslation } from 'react-i18next';
 
-const Footer = () => {
+export default function Footer () {
+  const { t } = useTranslation();
+
   return (
     <FooterWrapper>
       <LinkList>
         <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
+          <LinkTitle>{t("call")}</LinkTitle>
           <LinkItem href="tell: +54 3816540056">+54 3816540056</LinkItem>
         </LinkColumn>
         <LinkColumn>
@@ -19,7 +22,7 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>I want to make beatiful things, even if nobody cares, as oposse to ugly things, thats my intent</Slogan>
+          <Slogan>{t("slogan")}</Slogan>
         </CompanyContainer>
         <SocialContainer>
         <SocialIcons href="https://github.com" target="_blank">
@@ -34,4 +37,3 @@ const Footer = () => {
   );
 };
 
-export default Footer;

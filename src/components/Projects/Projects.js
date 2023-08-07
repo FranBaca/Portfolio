@@ -3,11 +3,15 @@ import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag,
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 import { experience } from '../../constants/data';
+import { useTranslation } from 'react-i18next';
 
-const Projects = () => (
-  <Section nopadding id="#projects">
+export default function Projects ()  {
+  const { t } = useTranslation();
+
+return(
+<Section nopadding id="#projects">
   <SectionDivider />
-  <SectionTitle main>Experience & Projects</SectionTitle>
+  <SectionTitle main>{t("projects")}</SectionTitle>
       <GridContainer>
         {experience.map((exp) =>(
            <BlogCard key={exp.id}  data-aos="fade-left" data-aos-duration="3000">
@@ -23,7 +27,7 @@ const Projects = () => (
              </TagList>
            </div>
            <UtilityList>
-              <ExternalLinks href={exp.link}>Source</ExternalLinks>
+              <ExternalLinks href={exp.link}>{t("Source")}</ExternalLinks>
             </UtilityList>
          </BlogCard>
         ))}
@@ -44,13 +48,13 @@ const Projects = () => (
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks target="_blank" href={project.visit}>Code</ExternalLinks>
-              <ExternalLinks  target="_blank" href={project.source}>Source</ExternalLinks>
+              <ExternalLinks target="_blank" href={project.visit}>{t("Code")}</ExternalLinks>
+              <ExternalLinks  target="_blank" href={project.source}>{t("Source")}</ExternalLinks>
             </UtilityList>
           </BlogCard>
         ))}
       </GridContainer>
   </Section>
-);
-
-export default Projects;
+)
+}
+  

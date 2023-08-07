@@ -1,0 +1,23 @@
+{
+    "welcome": "Hello! Welcome to my personal portfolio!",
+    "subtitle": "I'm Francisco Baca Alurralde, Full Stack Developer from Argentina. I want to create beautiful things, even if nobody cares, as opposed to ugly things, that's my intent.",
+    "buttonTitle": "Learn More",
+    "about": "About Me",
+    "slogan": "My purpose in the tech industry is to create and innovate. I enjoy creating stuff and I consider myself a very creative person.",
+    "slogan2": "I want to make beautiful things, even if nobody cares, as opposed to ugly things, that's my intent.",
+    "projects": "Experience and Projects",
+    "technologies": "Technologies",
+    "subTechnologies": "I've worked with a range of technologies in the development world. From Back-end to Design.",
+    "Front": "Experience with React.js",
+    "Back": "Experience with Node.js and Databases",
+    "UI/UX": "Experience with tools like Figma",
+    "Mobile": "Knowledge in React Native",
+    "Contact": "Contact",
+    "2018": "Entered university & started learning code.",
+    "2019": "Started the full-stack bootcamp at Henry.",
+    "2020": "Got my first job as a developer.",
+    "2021": "Got my second job as a developer.",
+    "call": "Call",
+    "Source":"Source",
+    "Code":"Code"
+  }

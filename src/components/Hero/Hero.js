@@ -1,26 +1,30 @@
 import React from 'react';
-
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection, ButtonSection } from './HeroStyles';
+import { useTranslation } from 'react-i18next';
+import { SocialIcons } from '../Header/HeaderStyles';
 
-const Hero = (props) => (
+export default function Hero (props) {
+  const { t } = useTranslation();
+  return(
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Hello there!  <br/>
-        Welcome to my personal portfolio
+      {t('welcome')}
       </SectionTitle>
       <SectionText>
-          I'm Francisco Baca Alurralde, Full Stack Developer from Argentina.<br/>
-          I want to make beatiful things, even if nobody cares, as oposse to ugly things, thats my intent
+          {t("subtitle")}<br/>
       </SectionText>
-      <ButtonSection>
-
-      <Button onClick={()=> window.location = "#about"}  target="_blank">Learn More</Button>
-      </ButtonSection>
+    <ButtonSection>
+    <SocialIcons href="https://github.com/FranBaca" target="_blank">
+        <AiFillGithub size="3rem"/>
+      </SocialIcons>
+      <SocialIcons href="https://www.linkedin.com/in/franbaca13/" target="_blank">
+        <AiFillLinkedin size="3rem"/>
+      </SocialIcons>
+    </ButtonSection>
     </LeftSection>
   </Section>
-);
-
-export default Hero;
+  )
+}
