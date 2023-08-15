@@ -10,7 +10,6 @@ export default function Projects ()  {
 
 return(
 <Section nopadding id="#projects">
-  <SectionDivider />
   <SectionTitle main>{t("projects")}</SectionTitle>
       <GridContainer>
         {experience.map((exp) =>(

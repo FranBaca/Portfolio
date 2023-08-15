@@ -131,6 +131,10 @@ transition: 0.3s ease;
 color: white;
 border-radius: 50px;
   padding: 8px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
 &:hover {
     background-color: #212d45;
     transform: scale(1.2);

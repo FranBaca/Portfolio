@@ -26,15 +26,6 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Henry Hotel',
-    description: "Using React, Node.js, Express & Cloud database, my team and I build a full app for a hotel with check-ins, reservation system, event planning, and admin panel",
-      image: '/images/1.png',
-      tags: ['Cloud', 'Express', 'React', 'Node'],
-    source: 'https://henryhotel.hruiz.com/',
-    visit: 'https://github.com/FranBaca/ecommerce-FT10-G2',
-    id: 0,
-  },
-  {
     title: 'Liteflix',
     description: "A lightweight netflix clone created with React, Chakra UI, React Dropzone",
     image: '/images/2.png',

@@ -4,6 +4,7 @@ import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponent
 import { LeftSection, ButtonSection } from './HeroStyles';
 import { useTranslation } from 'react-i18next';
 import { SocialIcons } from '../Header/HeaderStyles';
+import { Img } from '../Projects/ProjectsStyles';
 
 export default function Hero (props) {
   const { t } = useTranslation();

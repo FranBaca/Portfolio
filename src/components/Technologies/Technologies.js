@@ -10,7 +10,6 @@ export default function Technologies  () {
 
   return (
   <Section id="tech">
-    <SectionDivider/>
     <SectionTitle>{t("technologies")}</SectionTitle>
     <SectionText>
       {t("subTechnologies")}

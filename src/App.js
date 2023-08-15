@@ -8,16 +8,19 @@ import { Layout } from './layout/Layout';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   AOS.init();
   return (
     <Theme>
       <Layout>  
-        <Hero />
-      <Projects />
-      <Technologies />
-      <Timeline />
+        <Routes>
+            <Route path="/" element={<Hero/>}/>
+            <Route path="/techs" element={<Technologies/>}/>
+            <Route path="/projects" element={<Projects/>}/>
+            <Route path="/timeline" element={<Timeline/>}/>
+        </Routes>
       </Layout>
     </Theme>
   );

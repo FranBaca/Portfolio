@@ -21,17 +21,17 @@ return(
     </Div1>
     <Div2>
       <li>
-        <Link to="#projects">
+        <Link to="/projects">
           <NavLink>Projects</NavLink>
         </Link>
       </li>
       <li>
-        <Link to="#tech">
+        <Link to="/techs">
           <NavLink>Technologies</NavLink>
         </Link>
       </li>
       <li>
-        <Link to="#about">
+        <Link to="/timeline">
           <NavLink>About</NavLink>
         </Link>
       </li>
