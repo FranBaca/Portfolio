@@ -11,12 +11,16 @@ export const LeftSection = styled.div`
   text-align: center;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 90%;
-    padding: 4rem 1rem;
+    width: 100%;
+    padding: 3rem 1rem;
   }
   
   @media ${(props) => props.theme.breakpoints.md} {
     width: 100%;
+    padding: 4rem 1.5rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
     padding: 5rem 2rem;
   }
 
@@ -39,4 +43,14 @@ export const ButtonSection = styled.div`
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    gap: 1.5rem;
+  }
 `;

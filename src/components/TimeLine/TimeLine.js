@@ -4,6 +4,7 @@ import { TimeLineData } from '../../constants/constants';
 import { Img } from '../Projects/ProjectsStyles';
 import { useTranslation } from 'react-i18next';
 import TimeLineSkeleton from './TimeLineSkeleton';
+import { CarouselContainer, CarouselItem } from './TimeLineStyles';
 
 const Timeline = () => {
   const { t } = useTranslation();
@@ -50,29 +51,12 @@ const Timeline = () => {
               {t("slogan")}
             </SectionText>
           </div>
-          <div style={{ 
-            maxWidth: '1040px', 
-            margin: '0 auto', 
-            padding: '0 48px',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
-            marginTop: '40px'
-          }}>
+          <CarouselContainer>
             {TimeLineData.map((item, index) => (
-              <div
+              <CarouselItem
                 key={index}
                 className="animate-fade-in"
-                style={{
-                  animationDelay: `${index * 0.2}s`,
-                  padding: '20px',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: '10px',
-                  transition: 'transform 0.3s ease',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <h3 style={{ marginBottom: '15px' }}>{item.year}</h3>
                 <div style={{
@@ -82,9 +66,9 @@ const Timeline = () => {
                   marginBottom: '15px'
                 }} />
                 <p>{item.text}</p>
-              </div>
+              </CarouselItem>
             ))}
-          </div>
+          </CarouselContainer>
         </>
       )}
     </Section>

@@ -20,6 +20,7 @@ export const Container = styled.div`
     flex-direction: column;
     height: auto;
     padding: 0.5rem 1rem;
+    gap: 0.5rem;
   }
 
   @keyframes fade {
@@ -36,6 +37,10 @@ export const Span = styled.span`
   font-size: 1.8rem;
   color: ${props => props.theme.colors.text};
   margin-left: 0.5rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Div1 = styled.div`
@@ -43,7 +48,8 @@ export const Div1 = styled.div`
   flex-direction: row;
   align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-bottom: 0.5rem;
+    width: 100%;
+    justify-content: center;
   }
 `;
 
@@ -53,8 +59,10 @@ export const Div2 = styled.div`
   align-items: center;
   gap: 2rem;
   @media ${(props) => props.theme.breakpoints.sm} {
-    gap: 1rem;
-    margin-bottom: 0.5rem;
+    width: 100%;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 
@@ -64,7 +72,9 @@ export const Div3 = styled.div`
   align-items: center;
   gap: 0.5rem;
   @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
     justify-content: center;
+    gap: 1rem;
   }
 `;
 
@@ -75,11 +85,14 @@ export const NavLink = styled.a`
   color: ${props => props.theme.colors.textSecondary};
   transition: 0.3s ease;
   padding: 0.5rem 1rem;
+  white-space: nowrap;
+  
   &:hover {
     color: ${props => props.theme.colors.accent1};
     opacity: 1;
     cursor: pointer;
   }
+  
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.3rem 0.5rem;
     font-size: 1.4rem;
@@ -93,11 +106,11 @@ export const ContactDropDown = styled.button`
   position: relative;
   background: none;
   font-size: 1.7rem;
-
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
   transition: 0.3s ease;
+  align-items: center;
 
   &:focus {
     outline: none;
@@ -108,9 +121,7 @@ export const ContactDropDown = styled.button`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.4rem 0;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0;
+    font-size: 1.5rem;
   }
 `;
 
@@ -142,9 +153,14 @@ export const SocialIcons = styled.a`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
   &:hover {
     background-color: ${props => props.theme.colors.background2};
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 3px;
   }
 `;
