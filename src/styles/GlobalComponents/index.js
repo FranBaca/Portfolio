@@ -5,8 +5,9 @@ export const Section = styled.section`
   flex-direction: ${(props) => props.row ? "row" : "column" };
   padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
   margin: 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
@@ -18,8 +19,7 @@ export const Section = styled.section`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
-    width: calc(100vw - 32px);
+    width: 100%;
     flex-direction: column;
   }
 `
@@ -28,8 +28,8 @@ export const SectionTitle = styled.h2`
   font-weight: 800;
   font-size: ${(props) => props.main ? '65px' : '56px'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
-  width: max-content;
-  max-width: 100%;
+  width: 100%;
+  text-align: center;
   background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -50,7 +50,7 @@ export const SectionTitle = styled.h2`
     line-height: ${(props) => props.main ? '32px' : '40px'};
     margin-bottom: 8px;
     padding: ${(props) => props.main ? '16px 0 8px' : '0'};
-    max-width: 100%;
+    width: 100%;
   }
 `
 

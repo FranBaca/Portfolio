@@ -7,11 +7,16 @@ export default {
   },
   // Colors for layout
   colors: {
-    primary1: "hsl(204,23.8%,95.9%)",
-    background1: "#0F1624",
-    accent1: "hsl(34.9,98.6%,72.9%)",
-    button: "hsl(205.1,100%,36.1%)",
-    background2: "hsl(232.7,27.3%,23.7%)",
+    primary1: "hsl(210, 20%, 95%)",
+    background1: "#0A0A0A",
+    accent1: "hsl(210, 100%, 60%)",
+    button: "hsl(210, 100%, 40%)",
+    background2: "hsl(210, 10%, 15%)",
+    text: "hsl(210, 20%, 90%)",
+    textSecondary: "hsl(210, 20%, 70%)",
+    border: "hsl(210, 10%, 25%)",
+    hover: "hsl(210, 100%, 45%)",
+    headerBg: "rgba(10, 10, 10, 0.95)"
   },
   // Breakpoints for responsive design
   breakpoints: {

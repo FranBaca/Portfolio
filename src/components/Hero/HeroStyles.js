@@ -3,22 +3,21 @@ import styled from 'styled-components';
 export const LeftSection = styled.div`
   width: 100%;
   animation: moveDown 1.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  text-align: center;
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    
-    margin: 0 auto;
-}
-}
-  
+    width: 90%;
+    padding: 4rem 1rem;
   }
+  
   @media ${(props) => props.theme.breakpoints.md} {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
+    padding: 5rem 2rem;
   }
 
   @keyframes moveDown {
@@ -35,6 +34,9 @@ export const LeftSection = styled.div`
 `;
 
 export const ButtonSection = styled.div`
-display:flex;
-flex-direction:row;
-`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+`;

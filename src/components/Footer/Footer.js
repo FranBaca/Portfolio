@@ -25,10 +25,10 @@ export default function Footer () {
           <Slogan>{t("slogan")}</Slogan>
         </CompanyContainer>
         <SocialContainer>
-        <SocialIcons href="https://github.com" target="_blank">
+        <SocialIcons href="https://github.com/FranBaca" target="_blank">
         <AiFillGithub size="3rem"/>
       </SocialIcons>
-      <SocialIcons href="https://linkedin.com" target="_blank">
+      <SocialIcons href="https://www.linkedin.com/in/franciscobaca/" target="_blank">
         <AiFillLinkedin size="3rem"/>
       </SocialIcons>
       </SocialContainer>

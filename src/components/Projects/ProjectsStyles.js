@@ -8,64 +8,87 @@ export const Img = styled.img`
 `
 
 export const GridContainer = styled.section`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: 3rem;
-place-items: center;
-column-gap: 2rem;
-row-gap: 3rem;
-animation: moveDown 3s ease-out;
-@media ${(props) => props.theme.breakpoints.sm} {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 0;
-}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 3rem 5rem;
+  place-items: center;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  animation: moveDown 3s ease-out;
 
-@keyframes moveDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 3rem;
   }
 
-  100% {
-    opacity: 1;
-    transform: translate(0);
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 0;
   }
-}
 
+  @keyframes moveDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
 `
+
 export const BlogCard = styled.div`
   border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 520px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: ${props => props.theme.colors.background2};
+  border: 1px solid ${props => props.theme.colors.border};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
+    min-height: 400px;
+    padding: 1.5rem;
   }
 `;
+
 export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
-
+  margin-bottom: 1rem;
 `;
-
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
-  color: #9cc9e3;
+  color: ${props => props.theme.colors.text};
   padding: .5rem 0;
   font-size: ${(props) => props.title ? '3rem' : '2rem'};
 `;
 
 export const Hr = styled.hr`
   width: 50px;
-  height: 3px;
+  height: 2px;
   margin: 20px auto;
   border: 0;
-  background: #d0bb57;
+  background: ${props => props.theme.colors.accent1};
 `;
 
 export const Intro = styled.div`
@@ -78,48 +101,56 @@ export const Intro = styled.div`
   line-height: 18px;
 `;
 
-
 export const CardInfo = styled.p`
   width: 100%;
-  padding: 0 50px;
-  color: #e4e6e7;
+  padding: 0 1.5rem;
+  color: ${props => props.theme.colors.textSecondary};
   font-style: 2rem;
   line-height: 24px;
-  text-align: justify;
+  text-align: center;
+  margin: 1.5rem 0;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
-  
-}
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
 `;
-
 
 export const UtilityList = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
-}
+  color: ${props => props.theme.colors.text};
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  background: ${props => props.theme.colors.button};
+  border-radius: 8px;
+  transition: 0.3s ease;
+  &:hover {
+    background: ${props => props.theme.colors.hover};
+    transform: translateY(-2px);
+  }
 `;
 
 export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
-`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+`;
+
 export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
-`
+  color: ${props => props.theme.colors.textSecondary};
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: ${props => props.theme.colors.background1};
+  border-radius: 6px;
+  border: 1px solid ${props => props.theme.colors.border};
+`;

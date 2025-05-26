@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: 'Pet Fostering App (currently in development)',
+    description: "A pet fostering app that allows users to find and foster pets in their area",
+    image: '/images/petfoster.jpg',
+    tags: ['React Native', 'Node', 'Express', 'AWS'],
+    visit: 'https://github.com/FranBaca/PetFosteringBack',
+    id: 8,
+  },
+  {
     title: 'Airbnb Clone ',
     description: "Using Next.js, Prisma and Tailwind I build a full airbnb clone with reservations, bookings and Google Authentication ",
       image: '/images/6.png',
@@ -72,8 +80,8 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2018, text: 'Entered university & started learning code', },
-  { year: 2019, text: 'Started the Henry Bootcamp', },
-  { year: 2020, text: 'Got my first job as a developer', },
-  { year: 2021, text: 'Got my second job as a developer', },
+  { year: 2018, text: 'Began my journey in Computer Science at university', },
+  { year: 2021, text: 'Landed my first professional role as a Software Developer', },
+  { year: 2022, text: 'Helped drive growth in startups and achieved key investment milestones'},
+  { year: 2023, text: 'Joined Sovos as a Software Engineer and contribuited to SaaS products'},
 ];
